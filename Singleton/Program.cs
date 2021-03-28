@@ -8,8 +8,8 @@ namespace Singleton
         {
 
         }
-        public static Bike obj;
-        public static Bike GetInstance()
+        private static Bike obj;
+        private static Bike GetInstance()
         {
             if (obj == null)
             {
@@ -17,7 +17,7 @@ namespace Singleton
             }
             return obj;
         }
-        public string getDetails()
+        private string getDetails()
         {
             return "Winora";
         }

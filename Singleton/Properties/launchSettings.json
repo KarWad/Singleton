@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Singleton": {
+      "commandName": "Project",
+      "sqlDebugging": false,
+      "nativeDebugging": true
+    }
+  }
+}
