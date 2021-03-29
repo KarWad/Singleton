@@ -9,7 +9,7 @@ namespace Singleton
 
         }
         private static Bike obj;
-        private static Bike GetInstance()
+        public static Bike GetInstance()
         {
             if (obj == null)
             {
@@ -21,12 +21,24 @@ namespace Singleton
         {
             return "Winora";
         }
+    }
+
+    class program
+    {
         static void Main(string[] args)
         {
-            Bike bike = Bike.GetInstance();
-            string x = bike.getDetails();
-            Console.WriteLine(x);
-            Console.ReadLine();
+            Bike b1 = Bike.GetInstance();
+            Bike b2 = Bike.GetInstance();
+
+            if (b1 == b2)
+             {
+                Console.WriteLine("Singleton works, both variables contain the same instance.");
+            }
+            else
+            {
+                Console.WriteLine("Singleton failed, variables contain different instances.");
+            }
         }
     }
 }
+ 
